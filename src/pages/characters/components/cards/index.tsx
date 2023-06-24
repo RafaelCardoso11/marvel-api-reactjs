@@ -1,5 +1,5 @@
 import { Card } from "../card";
-import { ICardsSearchProps } from "../../interfaces/cardsSearchProps";
+import { ICardsSearchProps } from "../../interfaces/charactersSearchProps";
 import { StyledContainerCards } from "./styles";
 
 
@@ -9,8 +9,8 @@ export const Cards: React.FC<ICardsSearchProps> = ({ data: { results } }) => {
   return (
     <StyledContainerCards>
       {results.length
-        ? results.map((card, index) => (
-            <Card card={card} index={index} key={index} />
+        ? results.map((characters, index) => (
+            <Card characters={characters} index={index} key={index} />
           ))
         : "Nenhum personagem encontrado"}
     </StyledContainerCards>

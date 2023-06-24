@@ -1,16 +1,16 @@
-import { ICardProps } from "../../interfaces/cardProps";
+import { ICharactersProps } from "../../interfaces/charactersProps";
 import {
   StyledContainerCard,
   StyledContainerImg,
   StyledTypographName,
 } from "./styles";
 
-export const Card: React.FC<ICardProps> = ({ card }: any) => {
+export const Card: React.FC<ICharactersProps> = ({ characters }) => {
   return (
-    <StyledContainerCard onClick={() => console.log(card.id)}>
-      <StyledTypographName>{card.name}</StyledTypographName>
+    <StyledContainerCard onClick={() => console.log(characters.id)}>
+      <StyledTypographName>{characters.name}</StyledTypographName>
       <StyledContainerImg
-        src={card.thumbnail.path + "." + card.thumbnail.extension}
+        src={characters.thumbnail.path + "." + characters.thumbnail.extension}
         alt=""
       />
     </StyledContainerCard>
