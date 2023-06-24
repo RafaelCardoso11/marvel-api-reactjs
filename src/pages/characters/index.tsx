@@ -7,14 +7,14 @@ import { StyledContainer, StyledContainerSearch } from "./styles";
 
 export const Characters = () => {
   const [queryParams, setQueryParams] = useState("characters");
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchCharacters, setSearchCharacters] = useState<string>("");
   const { data: characters } = useDataFetcher<ICardsSearchProps>(queryParams);
 
   const handleSearch = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = event.target.value;
-    setSearchTerm(searchTerm);
-    if (searchTerm) {
-      setQueryParams("characters?nameStartsWith=" + searchTerm);
+    const searchCharacters = event.target.value;
+    setSearchCharacters(searchCharacters);
+    if (searchCharacters) {
+      setQueryParams("characters?nameStartsWith=" + searchCharacters);
     } else {
       setQueryParams("characters");
     }
@@ -26,7 +26,8 @@ export const Characters = () => {
         <input
           type="text"
           placeholder="Pesquisar..."
-          value={searchTerm}
+          data-testid=""
+          value={searchCharacters}
           onChange={handleSearch}
         />
       </StyledContainerSearch>
