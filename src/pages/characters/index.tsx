@@ -1,7 +1,7 @@
 import { useDataFetcher } from "@/hooks/useDataFetcher";
 import { useState } from "react";
 
-import { ICardsSearchProps } from "./interfaces/cardsSearchProps";
+import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
 import { Cards } from "./components/cards";
 import { StyledContainer, StyledContainerSearch } from "./styles";
 
@@ -21,17 +21,17 @@ export const Characters = () => {
   };
 
   return (
-    <StyledContainer>
-      <StyledContainerSearch>
+    <StyledContainer data-testid="id-container-characters">
+      <StyledContainerSearch data-testid="id-container-search-characters">
         <input
           type="text"
           placeholder="Pesquisar..."
-          data-testid=""
+          data-testid="id-searchCharacters"
           value={searchCharacters}
           onChange={handleSearch}
         />
       </StyledContainerSearch>
-      {characters && <Cards data={characters.data} />}
+      {characters && <Cards data={characters.data} data-testid="id-cards-characters"/>}
     </StyledContainer>
   );
 };
