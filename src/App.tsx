@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/characters";
+import { Characters } from "./pages/characters";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="characters/:id" element={<Home />} />
+        <Route path="/" element={<Characters />} />
+        <Route path="characters/:id" element={<Characters />} />
       </Routes>
     </BrowserRouter>
   );

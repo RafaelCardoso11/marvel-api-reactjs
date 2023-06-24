@@ -5,7 +5,7 @@ import { ICardsSearchProps } from "./interfaces/cardsSearchProps";
 import { Cards } from "./components/cards";
 import { StyledContainer, StyledContainerSearch } from "./styles";
 
-export const Home = () => {
+export const Characters = () => {
   const [queryParams, setQueryParams] = useState("characters");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const { data: characters } = useDataFetcher<ICardsSearchProps>(queryParams);
