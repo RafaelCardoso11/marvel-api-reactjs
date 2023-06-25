@@ -1,16 +1,4 @@
-import { cleanup, fireEvent, render } from "@testing-library/react";
-
-import * as useDataFetcherModule from "@/hooks/useDataFetcher";
-import { renderHook } from "@testing-library/react-hooks";
-import { ICardsSearchProps } from "../../interfaces/charactersSearchProps";
-import { Cards } from "./index";
-import { charactersMock } from "@/mocks/characters";
-
-const charactersMockEmpty: ICardsSearchProps = {
-  data: {
-    results: [],
-  },
-};
+import { cleanup } from "@testing-library/react";
 
 const mockData = jest.fn();
 
@@ -31,5 +19,7 @@ describe("<Cards/>", () => {
     mockData.mockRestore();
     jest.clearAllMocks();
   });
-  it.todo("");
+  it.todo("Deveria renderizar na tela o id-cards-container e os cards");
+  it.todo("Deveria renderizar na tela os cards ao informar os personagens");
+  it.todo("Deveria renderizar os cards com a imagem e nome dos personagens");
 });
