@@ -1,0 +1,10 @@
+{
+  "transform": {
+    "^.+\\.tsx?$": "@swc/jest"
+  },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1"
+  },
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["<rootDir>/src/jest-setup.ts"]
+}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
 import { Cards } from "./components/cards";
 import { StyledContainer, StyledContainerSearch } from "./styles";
+import { isEmpty } from "lodash";
 
 export const Characters = () => {
   const [queryParams, setQueryParams] = useState("characters");
@@ -13,7 +14,8 @@ export const Characters = () => {
   const handleSearch = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchCharacters = event.target.value;
     setSearchCharacters(searchCharacters);
-    if (searchCharacters) {
+
+    if (!isEmpty(searchCharacters.trim())) {
       setQueryParams("characters?nameStartsWith=" + searchCharacters);
     } else {
       setQueryParams("characters");
@@ -26,12 +28,18 @@ export const Characters = () => {
         <input
           type="text"
           placeholder="Pesquisar..."
-          data-testid="id-searchCharacters"
+          data-testid="id-search-characters"
           value={searchCharacters}
           onChange={handleSearch}
         />
       </StyledContainerSearch>
-      {characters && <Cards data={characters.data} data-testid="id-cards-characters"/>}
+      {characters?.data.results.length ? (
+        <div data-testid="id-cards-characters">
+          <Cards data={characters.data} />
+        </div>
+      ) : (
+        "Nenhum personagem encontrado"
+      )}
     </StyledContainer>
   );
 };
