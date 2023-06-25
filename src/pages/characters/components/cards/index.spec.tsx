@@ -22,7 +22,7 @@ jest.mock("@/hooks/useDataFetcher", () => {
   };
 });
 
-describe("<Characters/>", () => {
+describe("<Cards/>", () => {
   afterEach(cleanup);
   afterAll(() => {
     jest.unmock("@/hooks/useDataFetcher");
