@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar uma mensagem que não foi encontrado 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value="batman"
+      />
+    </div>
+    Nenhum personagem encontrado
+  </div>
+</div>
+`;
+
+exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagens 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value="H"
+      />
+    </div>
+    <div
+      data-testid="id-cards-characters"
+    >
+      <section
+        class="sc-gZGWnS ixooVO"
+      >
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            Hulk
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value="Hulk"
+      />
+    </div>
+    <div
+      data-testid="id-cards-characters"
+    >
+      <section
+        class="sc-gZGWnS ixooVO"
+      >
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            Hulk
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      data-testid="id-cards-characters"
+    >
+      <section
+        class="sc-gZGWnS ixooVO"
+      >
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            3-D Man
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            Hulk
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela caso tenha characters 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      data-testid="id-cards-characters"
+    >
+      <section
+        class="sc-gZGWnS ixooVO"
+      >
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            3-D Man
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            Hulk
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vazia 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value=" "
+      />
+    </div>
+    <div
+      data-testid="id-cards-characters"
+    >
+      <section
+        class="sc-gZGWnS ixooVO"
+      >
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            3-D Man
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+        <div
+          class="sc-kvAqsT crfTLG"
+        >
+          <h2
+            class="sc-cdtKKh hnyVce"
+          >
+            Hulk
+          </h2>
+          <img
+            alt=""
+            class="sc-grJzXs hvxsKK"
+            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+          />
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Characters/> Deveria renderizar na tela os componentes container-characters, container-search-characters e searchCharacters 1`] = `
+<div>
+  <div
+    class="sc-cLrhaH jGMCgM"
+    data-testid="id-container-characters"
+  >
+    <div
+      class="sc-jWWaec iQvkjV"
+      data-testid="id-container-search-characters"
+    >
+      <input
+        data-testid="id-search-characters"
+        placeholder="Pesquisar..."
+        type="text"
+        value=""
+      />
+    </div>
+    Nenhum personagem encontrado
+  </div>
+</div>
+`;
