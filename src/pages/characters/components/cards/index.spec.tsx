@@ -2,13 +2,13 @@ import { cleanup, render } from "@testing-library/react";
 import { Cards } from ".";
 import { charactersMock } from "@/mocks/characters";
 import { ICardsSearchProps } from "../../interfaces/charactersSearchProps";
+import RoutersContextTesting from "@/tests/routers";
 
 const charactersMockEmpty: ICardsSearchProps = {
   data: {
     results: [],
   },
 };
-
 
 describe("<Cards/>", () => {
   afterEach(cleanup);
@@ -19,14 +19,22 @@ describe("<Cards/>", () => {
     jest.clearAllMocks();
   });
   it("Deveria renderizar na tela um container dos Cards", () => {
-    const screen = render(<Cards data={charactersMockEmpty.data} />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Cards data={charactersMockEmpty.data} />
+      </RoutersContextTesting>
+    );
     const cardsContainer = screen.getByTestId("id-cards-container");
     expect(cardsContainer).toBeInTheDocument();
     expect(screen.container).toMatchSnapshot();
     expect.assertions(2);
   });
   it("Deveria renderizar na tela um container com cards ao injetar os personagens", () => {
-    const screen = render(<Cards data={charactersMock.data} />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Cards data={charactersMock.data} />
+      </RoutersContextTesting>
+    );
     const cardsContainer = screen.getByTestId("id-cards-container");
 
     const cards = screen.getAllByTestId("id-cards-content");
