@@ -1,39 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Cards/> Deveria renderizar na tela o container e os cards 1`] = `
+exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar os personagens 1`] = `
 <div>
   <section
     class="sc-gZGWnS ixooVO"
     data-testid="id-cards-container"
   >
     <div
-      class="sc-kvAqsT crfTLG"
+      data-testid="id-cards-content"
     >
-      <h2
-        class="sc-cdtKKh hnyVce"
+      <div
+        class="sc-kvAqsT crfTLG"
+        data-testid="id-card-container"
       >
-        3-D Man
-      </h2>
-      <img
-        alt=""
-        class="sc-grJzXs hvxsKK"
-        src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-      />
+        <h2
+          class="sc-cdtKKh hnyVce"
+          data-testid="id-typograph-name-content"
+        >
+          3-D Man
+        </h2>
+        <img
+          alt="Imagem do personagem 3-D Man"
+          class="sc-grJzXs hvxsKK"
+          data-testid="id-img-content"
+          src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+        />
+      </div>
     </div>
     <div
-      class="sc-kvAqsT crfTLG"
+      data-testid="id-cards-content"
     >
-      <h2
-        class="sc-cdtKKh hnyVce"
+      <div
+        class="sc-kvAqsT crfTLG"
+        data-testid="id-card-container"
       >
-        Hulk
-      </h2>
-      <img
-        alt=""
-        class="sc-grJzXs hvxsKK"
-        src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-      />
+        <h2
+          class="sc-cdtKKh hnyVce"
+          data-testid="id-typograph-name-content"
+        >
+          Hulk
+        </h2>
+        <img
+          alt="Imagem do personagem Hulk"
+          class="sc-grJzXs hvxsKK"
+          data-testid="id-img-content"
+          src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+        />
+      </div>
     </div>
   </section>
+</div>
+`;
+
+exports[`<Cards/> Deveria renderizar na tela um container dos Cards 1`] = `
+<div>
+  <section
+    class="sc-gZGWnS ixooVO"
+    data-testid="id-cards-container"
+  />
 </div>
 `;

@@ -1,14 +1,14 @@
-import { cleanup } from "@testing-library/react";
+import { cleanup, render } from "@testing-library/react";
+import { Cards } from ".";
+import { charactersMock } from "@/mocks/characters";
+import { ICardsSearchProps } from "../../interfaces/charactersSearchProps";
 
-const mockData = jest.fn();
+const charactersMockEmpty: ICardsSearchProps = {
+  data: {
+    results: [],
+  },
+};
 
-jest.mock("@/hooks/useDataFetcher", () => {
-  return {
-    useDataFetcher: () => {
-      return mockData();
-    },
-  };
-});
 
 describe("<Cards/>", () => {
   afterEach(cleanup);
@@ -16,10 +16,24 @@ describe("<Cards/>", () => {
     jest.unmock("@/hooks/useDataFetcher");
   });
   beforeEach(() => {
-    mockData.mockRestore();
     jest.clearAllMocks();
   });
-  it.todo("Deveria renderizar na tela o id-cards-container e os cards");
-  it.todo("Deveria renderizar na tela os cards ao informar os personagens");
-  it.todo("Deveria renderizar os cards com a imagem e nome dos personagens");
+  it("Deveria renderizar na tela um container dos Cards", () => {
+    const screen = render(<Cards data={charactersMockEmpty.data} />);
+    const cardsContainer = screen.getByTestId("id-cards-container");
+    expect(cardsContainer).toBeInTheDocument();
+    expect(screen.container).toMatchSnapshot();
+    expect.assertions(2);
+  });
+  it("Deveria renderizar na tela um container com cards ao injetar os personagens", () => {
+    const screen = render(<Cards data={charactersMock.data} />);
+    const cardsContainer = screen.getByTestId("id-cards-container");
+
+    const cards = screen.getAllByTestId("id-cards-content");
+
+    expect(cards.length).toBe(charactersMock.data.results.length);
+    expect(cardsContainer).toBeInTheDocument();
+    expect(screen.container).toMatchSnapshot();
+    expect.assertions(3);
+  });
 });

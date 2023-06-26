@@ -4,9 +4,11 @@ import { StyledContainerCards } from "./styles";
 
 export const Cards: React.FC<ICardsSearchProps> = ({ data: { results } }) => {
   return (
-    <StyledContainerCards>
+    <StyledContainerCards data-testid="id-cards-container">
       {results.map((characters, index) => (
-        <Card characters={characters} index={index} key={index} />
+        <div data-testid="id-cards-content" key={index}>
+          <Card characters={characters}  data-testid="teste" />
+        </div>
       ))}
     </StyledContainerCards>
   );
