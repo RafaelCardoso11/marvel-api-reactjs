@@ -1,9 +1,15 @@
 import { Characters } from "./index";
-import { cleanup, fireEvent, render, renderHook } from "@testing-library/react";
+import {
+  cleanup,
+  fireEvent,
+  render,
+  renderHook,
+} from "@testing-library/react";
 import { charactersMock } from "@/mocks/characters";
 import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
 import * as useDataFetcherModule from "@/hooks/useDataFetcher";
 import RoutersContextTesting from "@/tests/routers";
+import { act } from "react-dom/test-utils";
 
 const charactersMockEmpty: ICardsSearchProps = {
   data: {
@@ -22,13 +28,20 @@ jest.mock("@/hooks/useDataFetcher", () => {
 });
 
 describe("<Characters/>", () => {
-  afterEach(cleanup);
+  jest.useFakeTimers(); // Usar fake timers antes dos testes
+  afterEach(() => {
+    cleanup();
+    jest.clearAllTimers(); // Limpar todos os timers
+  });
+
   afterAll(() => {
     jest.unmock("@/hooks/useDataFetcher");
   });
   beforeEach(() => {
     // Resetar o mock antes de cada teste
     mockData.mockRestore();
+    mockData.mockClear();
+
     jest.clearAllMocks();
   });
   it("Deveria renderizar na tela os componentes container-characters, container-search-characters e searchCharacters", () => {
@@ -130,6 +143,12 @@ describe("<Characters/>", () => {
     });
     expect(inputSearchCharacters).toHaveValue(valueNameSearch);
 
+
+    act(() => {
+      jest.runAllTimers();
+    });
+    expect(mockData).toHaveBeenCalledTimes(3);
+
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
     );
@@ -162,9 +181,9 @@ describe("<Characters/>", () => {
     expect(imgsInScreen.length).toBe(1);
 
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(5);
+    expect.assertions(6);
   });
-  it("Deveria buscar a partir da inicial do nome dos personagens", () => {
+  it("Deveria buscar a partir da inicial do nome dos personagens", async () => {
     mockData.mockReturnValue({
       data: charactersMock,
     });
@@ -181,12 +200,17 @@ describe("<Characters/>", () => {
 
     expect(inputSearchCharacters).toBeInTheDocument();
 
-    fireEvent.input(inputSearchCharacters, {
+    fireEvent.change(inputSearchCharacters, {
       target: {
         value: valueNameSearch,
       },
     });
     expect(inputSearchCharacters).toHaveValue(valueNameSearch);
+
+    act(() => {
+      jest.runAllTimers();
+    });
+    expect(mockData).toHaveBeenCalledTimes(3);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
@@ -220,7 +244,10 @@ describe("<Characters/>", () => {
     expect(cardHulk).toBeInTheDocument();
     expect(imgsInScreen.length).toBe(1);
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(5);
+
+    expect(mockData).toHaveBeenCalledTimes(6);
+
+    expect.assertions(7);
   });
   it("Deveria buscar todos os personagens caso a busca seja vazia", () => {
     mockData.mockReturnValue({
@@ -246,6 +273,11 @@ describe("<Characters/>", () => {
     });
     expect(inputSearchCharacters).toHaveValue(valueNameSearch);
 
+    act(() => {
+      jest.runAllTimers();
+    });
+    expect(mockData).toHaveBeenCalledTimes(3);
+    
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
     );
@@ -268,7 +300,7 @@ describe("<Characters/>", () => {
     expect(cardHulk).toBeInTheDocument();
     expect(imgsInScreen.length).toBe(charactersMock.data.results.length);
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(6);
+    expect.assertions(7);
   });
   it("Deveria ao buscar um characters que não existe mostrar uma mensagem que não foi encontrado", () => {
     mockData.mockReturnValue({
@@ -294,6 +326,11 @@ describe("<Characters/>", () => {
     });
     expect(inputSearchCharacters).toHaveValue(valueNameSearch);
 
+    act(() => {
+      jest.runAllTimers();
+    });
+    expect(mockData).toHaveBeenCalledTimes(3);
+
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
     );
@@ -316,6 +353,6 @@ describe("<Characters/>", () => {
     expect(result.current.data).toEqual(charactersMockEmpty);
     expect(messageSearchNotFind).toBeInTheDocument();
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(5);
+    expect.assertions(6);
   });
 });

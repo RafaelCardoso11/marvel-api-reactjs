@@ -11,6 +11,7 @@ exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar u
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
@@ -33,6 +34,7 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
@@ -84,6 +86,7 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
@@ -135,6 +138,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
@@ -207,6 +211,7 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
@@ -279,6 +284,7 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
@@ -351,6 +357,7 @@ exports[`<Characters/> Deveria renderizar na tela os componentes container-chara
       data-testid="id-container-search-characters"
     >
       <input
+        class="sc-fIGkQR"
         data-testid="id-search-characters"
         placeholder="Pesquisar..."
         type="text"
