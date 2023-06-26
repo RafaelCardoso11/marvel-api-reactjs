@@ -1,9 +1,9 @@
 import { Characters } from "./index";
-import { cleanup, fireEvent, render } from "@testing-library/react";
+import { cleanup, fireEvent, render, renderHook } from "@testing-library/react";
 import { charactersMock } from "@/mocks/characters";
 import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
 import * as useDataFetcherModule from "@/hooks/useDataFetcher";
-import { renderHook } from "@testing-library/react-hooks";
+
 
 const charactersMockEmpty: ICardsSearchProps = {
   data: {

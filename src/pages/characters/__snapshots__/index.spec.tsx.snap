@@ -44,20 +44,25 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
     >
       <section
         class="sc-gZGWnS ixooVO"
+        data-testid="id-cards-container"
       >
         <div
-          class="sc-kvAqsT crfTLG"
+          data-testid="id-cards-content"
         >
-          <h2
-            class="sc-cdtKKh hnyVce"
+          <div
+            class="sc-kvAqsT crfTLG"
           >
-            Hulk
-          </h2>
-          <img
-            alt=""
-            class="sc-grJzXs hvxsKK"
-            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          />
+            <h2
+              class="sc-cdtKKh hnyVce"
+            >
+              Hulk
+            </h2>
+            <img
+              alt=""
+              class="sc-grJzXs hvxsKK"
+              src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -87,20 +92,25 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
     >
       <section
         class="sc-gZGWnS ixooVO"
+        data-testid="id-cards-container"
       >
         <div
-          class="sc-kvAqsT crfTLG"
+          data-testid="id-cards-content"
         >
-          <h2
-            class="sc-cdtKKh hnyVce"
+          <div
+            class="sc-kvAqsT crfTLG"
           >
-            Hulk
-          </h2>
-          <img
-            alt=""
-            class="sc-grJzXs hvxsKK"
-            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          />
+            <h2
+              class="sc-cdtKKh hnyVce"
+            >
+              Hulk
+            </h2>
+            <img
+              alt=""
+              class="sc-grJzXs hvxsKK"
+              src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -130,6 +140,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
     >
       <section
         class="sc-gZGWnS ixooVO"
+        data-testid="id-cards-container"
       >
         <div
           class="sc-kvAqsT crfTLG"
@@ -187,34 +198,43 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
     >
       <section
         class="sc-gZGWnS ixooVO"
+        data-testid="id-cards-container"
       >
         <div
-          class="sc-kvAqsT crfTLG"
+          data-testid="id-cards-content"
         >
-          <h2
-            class="sc-cdtKKh hnyVce"
+          <div
+            class="sc-kvAqsT crfTLG"
           >
-            3-D Man
-          </h2>
-          <img
-            alt=""
-            class="sc-grJzXs hvxsKK"
-            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          />
+            <h2
+              class="sc-cdtKKh hnyVce"
+            >
+              3-D Man
+            </h2>
+            <img
+              alt=""
+              class="sc-grJzXs hvxsKK"
+              src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+            />
+          </div>
         </div>
         <div
-          class="sc-kvAqsT crfTLG"
+          data-testid="id-cards-content"
         >
-          <h2
-            class="sc-cdtKKh hnyVce"
+          <div
+            class="sc-kvAqsT crfTLG"
           >
-            Hulk
-          </h2>
-          <img
-            alt=""
-            class="sc-grJzXs hvxsKK"
-            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          />
+            <h2
+              class="sc-cdtKKh hnyVce"
+            >
+              Hulk
+            </h2>
+            <img
+              alt=""
+              class="sc-grJzXs hvxsKK"
+              src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -244,34 +264,43 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
     >
       <section
         class="sc-gZGWnS ixooVO"
+        data-testid="id-cards-container"
       >
         <div
-          class="sc-kvAqsT crfTLG"
+          data-testid="id-cards-content"
         >
-          <h2
-            class="sc-cdtKKh hnyVce"
+          <div
+            class="sc-kvAqsT crfTLG"
           >
-            3-D Man
-          </h2>
-          <img
-            alt=""
-            class="sc-grJzXs hvxsKK"
-            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          />
+            <h2
+              class="sc-cdtKKh hnyVce"
+            >
+              3-D Man
+            </h2>
+            <img
+              alt=""
+              class="sc-grJzXs hvxsKK"
+              src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+            />
+          </div>
         </div>
         <div
-          class="sc-kvAqsT crfTLG"
+          data-testid="id-cards-content"
         >
-          <h2
-            class="sc-cdtKKh hnyVce"
+          <div
+            class="sc-kvAqsT crfTLG"
           >
-            Hulk
-          </h2>
-          <img
-            alt=""
-            class="sc-grJzXs hvxsKK"
-            src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          />
+            <h2
+              class="sc-cdtKKh hnyVce"
+            >
+              Hulk
+            </h2>
+            <img
+              alt=""
+              class="sc-grJzXs hvxsKK"
+              src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+            />
+          </div>
         </div>
       </section>
     </div>

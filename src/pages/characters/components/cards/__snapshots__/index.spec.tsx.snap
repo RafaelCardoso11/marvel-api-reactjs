@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cards/> Deveria renderizar na tela o container e os cards 1`] = `
+<div>
+  <section
+    class="sc-gZGWnS ixooVO"
+    data-testid="id-cards-container"
+  >
+    <div
+      class="sc-kvAqsT crfTLG"
+    >
+      <h2
+        class="sc-cdtKKh hnyVce"
+      >
+        3-D Man
+      </h2>
+      <img
+        alt=""
+        class="sc-grJzXs hvxsKK"
+        src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+      />
+    </div>
+    <div
+      class="sc-kvAqsT crfTLG"
+    >
+      <h2
+        class="sc-cdtKKh hnyVce"
+      >
+        Hulk
+      </h2>
+      <img
+        alt=""
+        class="sc-grJzXs hvxsKK"
+        src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+      />
+    </div>
+  </section>
+</div>
+`;
