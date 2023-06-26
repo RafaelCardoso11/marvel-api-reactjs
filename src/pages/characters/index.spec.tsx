@@ -3,7 +3,7 @@ import { cleanup, fireEvent, render, renderHook } from "@testing-library/react";
 import { charactersMock } from "@/mocks/characters";
 import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
 import * as useDataFetcherModule from "@/hooks/useDataFetcher";
-
+import RoutersContextTesting from "@/tests/routers";
 
 const charactersMockEmpty: ICardsSearchProps = {
   data: {
@@ -35,7 +35,11 @@ describe("<Characters/>", () => {
     mockData.mockReturnValue({
       data: charactersMockEmpty,
     });
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
     const containerCharacters = screen.getByTestId("id-container-characters");
     const containerSearchCharacters = screen.getByTestId(
       "id-container-search-characters"
@@ -53,7 +57,11 @@ describe("<Characters/>", () => {
     mockData.mockReturnValue({
       data: charactersMock,
     });
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const useDataFetcherMock = jest.spyOn(
       useDataFetcherModule,
@@ -75,7 +83,11 @@ describe("<Characters/>", () => {
       data: charactersMock,
     });
 
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const { result } = renderHook(() =>
       useDataFetcherModule.useDataFetcher("")
@@ -101,7 +113,11 @@ describe("<Characters/>", () => {
 
     const valueNameSearch = "Hulk";
 
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const inputSearchCharacters = screen.getByTestId("id-search-characters");
 
@@ -132,7 +148,11 @@ describe("<Characters/>", () => {
       data: dataWithCharactersSearch,
     });
 
-    screen.rerender(<Characters />);
+    screen.rerender(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
     rerender();
 
     const cardHulk = screen.getByText("Hulk");
@@ -151,7 +171,11 @@ describe("<Characters/>", () => {
 
     const valueNameSearch = "H";
 
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const inputSearchCharacters = screen.getByTestId("id-search-characters");
 
@@ -184,7 +208,11 @@ describe("<Characters/>", () => {
     });
 
     rerender();
-    screen.rerender(<Characters />);
+    screen.rerender(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const cardHulk = screen.getByText("Hulk");
     const imgsInScreen = screen.getAllByRole("img");
@@ -201,7 +229,11 @@ describe("<Characters/>", () => {
 
     const valueNameSearch = " ";
 
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const inputSearchCharacters = screen.getByTestId("id-search-characters");
 
@@ -222,7 +254,11 @@ describe("<Characters/>", () => {
       data: charactersMock,
     });
 
-    screen.rerender(<Characters />);
+    screen.rerender(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
     rerender();
 
     const cardHulk = screen.getByText("Hulk");
@@ -241,7 +277,11 @@ describe("<Characters/>", () => {
 
     const valueNameSearch = "batman";
 
-    const screen = render(<Characters />);
+    const screen = render(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
 
     const inputSearchCharacters = screen.getByTestId("id-search-characters");
 
@@ -262,7 +302,11 @@ describe("<Characters/>", () => {
       data: charactersMockEmpty,
     });
 
-    screen.rerender(<Characters />);
+    screen.rerender(
+      <RoutersContextTesting>
+        <Characters />
+      </RoutersContextTesting>
+    );
     rerender();
 
     const messageSearchNotFind = screen.getByText(
