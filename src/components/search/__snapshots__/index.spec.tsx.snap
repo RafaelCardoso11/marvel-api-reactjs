@@ -11,3 +11,27 @@ exports[`<Search/> Deveria renderizar na tela o componente Search com um Input 1
   />
 </div>
 `;
+
+exports[`<Search/> Deveria ser possível buscar 1`] = `
+<div>
+  <input
+    class="sc-kvAqsT"
+    data-testid="id-search-characters"
+    placeholder="Pesquisar..."
+    type="text"
+    value="teste"
+  />
+</div>
+`;
+
+exports[`<Search/> Deveria ser possível buscar de forma Debounce 1`] = `
+<div>
+  <input
+    class="sc-kvAqsT"
+    data-testid="id-search-characters"
+    placeholder="Pesquisar..."
+    type="text"
+    value="teste"
+  />
+</div>
+`;
