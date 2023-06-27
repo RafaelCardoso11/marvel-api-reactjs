@@ -1,10 +1,11 @@
 import { cleanup, render } from "@testing-library/react";
 import { Cards } from ".";
 import { charactersMock } from "@/mocks/characters";
-import { ICardsSearchProps } from "../../interfaces/charactersSearchProps";
-import RoutersContextTesting from "@/tests/routers";
 
-const charactersMockEmpty: ICardsSearchProps = {
+import RoutersContextTesting from "@/tests/routers";
+import { ICharacters } from "@/interfaces/characters";
+
+const charactersMockEmpty: ICharacters = {
   data: {
     results: [],
   },

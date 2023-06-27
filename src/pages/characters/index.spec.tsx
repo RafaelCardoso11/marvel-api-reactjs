@@ -1,17 +1,13 @@
 import { Characters } from "./index";
-import {
-  cleanup,
-  fireEvent,
-  render,
-  renderHook,
-} from "@testing-library/react";
+import { cleanup, fireEvent, render, renderHook } from "@testing-library/react";
 import { charactersMock } from "@/mocks/characters";
-import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
+import { ICharacters } from "@/interfaces/characters";
 import * as useDataFetcherModule from "@/hooks/useDataFetcher";
 import RoutersContextTesting from "@/tests/routers";
 import { act } from "react-dom/test-utils";
+import { ICharacter } from "@/interfaces/character";
 
-const charactersMockEmpty: ICardsSearchProps = {
+const charactersMockEmpty: ICharacters = {
   data: {
     results: [],
   },
@@ -143,18 +139,17 @@ describe("<Characters/>", () => {
     });
     expect(inputSearchCharacters).toHaveValue(valueNameSearch);
 
-
     act(() => {
       jest.runAllTimers();
     });
     expect(mockData).toHaveBeenCalledTimes(3);
 
     const { result, rerender } = renderHook(() =>
-      useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
+      useDataFetcherModule.useDataFetcher<ICharacters>("")
     );
 
     const filterCharacterFromName = result.current.data.data.results.filter(
-      ({ name }) =>
+      ({ name }: ICharacter) =>
         name.toLocaleLowerCase().includes(valueNameSearch.toLocaleLowerCase())
     );
     const dataWithCharactersSearch = {
@@ -213,7 +208,7 @@ describe("<Characters/>", () => {
     expect(mockData).toHaveBeenCalledTimes(3);
 
     const { result, rerender } = renderHook(() =>
-      useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
+      useDataFetcherModule.useDataFetcher<ICharacters>("")
     );
 
     const filterCharacterFromName = result.current.data.data.results.filter(
@@ -277,9 +272,9 @@ describe("<Characters/>", () => {
       jest.runAllTimers();
     });
     expect(mockData).toHaveBeenCalledTimes(3);
-    
+
     const { result, rerender } = renderHook(() =>
-      useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
+      useDataFetcherModule.useDataFetcher<ICharacters>("")
     );
 
     mockData.mockReturnValue({
@@ -332,7 +327,7 @@ describe("<Characters/>", () => {
     expect(mockData).toHaveBeenCalledTimes(3);
 
     const { result, rerender } = renderHook(() =>
-      useDataFetcherModule.useDataFetcher<ICardsSearchProps>("")
+      useDataFetcherModule.useDataFetcher<ICharacters>("")
     );
 
     mockData.mockReturnValue({

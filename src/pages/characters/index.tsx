@@ -1,7 +1,7 @@
 import { useDataFetcher } from "@/hooks/useDataFetcher";
 import { useEffect, useCallback, useState } from "react";
 
-import { ICardsSearchProps } from "./interfaces/charactersSearchProps";
+import { ICharacters } from "@/interfaces/characters";
 import { Cards } from "./components/cards";
 import { StyledContainer, StyledContainerSearch } from "./styles";
 import { isEmpty } from "lodash";
@@ -11,7 +11,7 @@ export const Characters = () => {
   const [queryParams, setQueryParams] = useState("characters");
   const [valueSearch, setValueSearch] = useState<string>("");
 
-  const { data: characters } = useDataFetcher<ICardsSearchProps>(queryParams);
+  const { data: characters } = useDataFetcher<ICharacters>(queryParams);
 
   const handleSearch = useCallback(() => {
     if (!isEmpty(valueSearch.trim())) {

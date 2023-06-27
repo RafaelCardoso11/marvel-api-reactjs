@@ -15,7 +15,7 @@ describe("<Cards/>", () => {
   it("Deveria renderizar na tela um container card, texto do name e imagem do card", () => {
     const screen = render(
       <RoutersContextTesting>
-        <Card characters={charactersMock.data.results[0]} />
+        <Card character={charactersMock.data.results[0]} />
       </RoutersContextTesting>
     );
     const cardsContainer = screen.getByTestId("id-card-container");
@@ -33,7 +33,7 @@ describe("<Cards/>", () => {
     const oneCharactersForCharactersMock = charactersMock.data.results[0];
     const screen = render(
       <RoutersContextTesting>
-        <Card characters={oneCharactersForCharactersMock} />
+        <Card character={oneCharactersForCharactersMock} />
       </RoutersContextTesting>
     );
     const cardsContainer = screen.getByTestId("id-card-container");
@@ -74,7 +74,7 @@ describe("<Cards/>", () => {
           />,
         ]}
       >
-        <Card characters={oneCharactersForCharactersMock} />
+        <Card character={oneCharactersForCharactersMock} />
       </RoutersContextTesting>
     );
 

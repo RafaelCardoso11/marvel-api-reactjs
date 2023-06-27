@@ -1,6 +1,6 @@
-import { ICharacters } from "./characters";
+import { ICharacter } from "@/interfaces/character";
 
 export interface ICharactersProps {
-   characters: ICharacters
+   character: ICharacter
   }
   

@@ -1,4 +1,4 @@
-export interface ICharacters {
+export interface ICharacter {
   id: number;
   name: string;
   thumbnail: { path: string; extension: string };
