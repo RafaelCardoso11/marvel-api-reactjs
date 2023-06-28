@@ -6,7 +6,8 @@ exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar o
     class="sc-gZGWnS eTVhLD"
     data-testid="id-cards-container"
   >
-    <div
+    <button
+      class="sc-fIGkQR"
       data-testid="id-cards-content"
     >
       <div
@@ -26,8 +27,9 @@ exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar o
           src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         />
       </div>
-    </div>
-    <div
+    </button>
+    <button
+      class="sc-fIGkQR"
       data-testid="id-cards-content"
     >
       <div
@@ -47,7 +49,7 @@ exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar o
           src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         />
       </div>
-    </div>
+    </button>
   </section>
   <div
     class="sc-cLrhaH kYOzDC"

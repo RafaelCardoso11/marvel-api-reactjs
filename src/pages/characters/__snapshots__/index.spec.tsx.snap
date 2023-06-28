@@ -61,7 +61,8 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
         class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
-        <div
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -81,7 +82,7 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
+        </button>
       </section>
       <div
         class="sc-cLrhaH kYOzDC"
@@ -132,7 +133,8 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
         class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
-        <div
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -152,7 +154,7 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
+        </button>
       </section>
       <div
         class="sc-cLrhaH kYOzDC"
@@ -221,7 +223,8 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
         class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
-        <div
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -241,8 +244,9 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
-        <div
+        </button>
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -262,7 +266,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
+        </button>
       </section>
       <div
         class="sc-cLrhaH kYOzDC"
@@ -331,7 +335,8 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
         class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
-        <div
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -351,8 +356,9 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
-        <div
+        </button>
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -372,7 +378,7 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
+        </button>
       </section>
       <div
         class="sc-cLrhaH kYOzDC"
@@ -423,7 +429,8 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
         class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
-        <div
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -443,8 +450,9 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
-        <div
+        </button>
+        <button
+          class="sc-fIGkQR"
           data-testid="id-cards-content"
         >
           <div
@@ -464,7 +472,7 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
-        </div>
+        </button>
       </section>
       <div
         class="sc-cLrhaH kYOzDC"
