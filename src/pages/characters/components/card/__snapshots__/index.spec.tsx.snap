@@ -3,7 +3,7 @@
 exports[`<Cards/> Deveria renderizar a imagem e nome do personagem ao injeta-lo por props 1`] = `
 <div>
   <div
-    class="sc-kvAqsT crfTLG"
+    class="sc-kvAqsT efdGIg"
     data-testid="id-card-container"
   >
     <h2
@@ -14,7 +14,7 @@ exports[`<Cards/> Deveria renderizar a imagem e nome do personagem ao injeta-lo 
     </h2>
     <img
       alt="Imagem do personagem 3-D Man"
-      class="sc-grJzXs hvxsKK"
+      class="sc-grJzXs cqACap"
       data-testid="id-img-content"
       src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
     />
@@ -25,7 +25,7 @@ exports[`<Cards/> Deveria renderizar a imagem e nome do personagem ao injeta-lo 
 exports[`<Cards/> Deveria renderizar na tela um container card, texto do name e imagem do card 1`] = `
 <div>
   <div
-    class="sc-kvAqsT crfTLG"
+    class="sc-kvAqsT efdGIg"
     data-testid="id-card-container"
   >
     <h2
@@ -36,7 +36,7 @@ exports[`<Cards/> Deveria renderizar na tela um container card, texto do name e 
     </h2>
     <img
       alt="Imagem do personagem 3-D Man"
-      class="sc-grJzXs hvxsKK"
+      class="sc-grJzXs cqACap"
       data-testid="id-img-content"
       src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
     />

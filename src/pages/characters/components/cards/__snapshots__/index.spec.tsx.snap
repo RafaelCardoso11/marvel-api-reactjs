@@ -3,14 +3,14 @@
 exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar os personagens 1`] = `
 <div>
   <section
-    class="sc-gZGWnS ixooVO"
+    class="sc-gZGWnS eTVhLD"
     data-testid="id-cards-container"
   >
     <div
       data-testid="id-cards-content"
     >
       <div
-        class="sc-kvAqsT crfTLG"
+        class="sc-kvAqsT efdGIg"
         data-testid="id-card-container"
       >
         <h2
@@ -21,7 +21,7 @@ exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar o
         </h2>
         <img
           alt="Imagem do personagem 3-D Man"
-          class="sc-grJzXs hvxsKK"
+          class="sc-grJzXs cqACap"
           data-testid="id-img-content"
           src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         />
@@ -31,7 +31,7 @@ exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar o
       data-testid="id-cards-content"
     >
       <div
-        class="sc-kvAqsT crfTLG"
+        class="sc-kvAqsT efdGIg"
         data-testid="id-card-container"
       >
         <h2
@@ -42,21 +42,39 @@ exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar o
         </h2>
         <img
           alt="Imagem do personagem Hulk"
-          class="sc-grJzXs hvxsKK"
+          class="sc-grJzXs cqACap"
           data-testid="id-img-content"
           src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         />
       </div>
     </div>
   </section>
+  <div
+    class="sc-cLrhaH kYOzDC"
+  >
+    <button
+      class="sc-jWWaec frwRuj"
+    >
+      Adicionar Mais
+    </button>
+  </div>
 </div>
 `;
 
 exports[`<Cards/> Deveria renderizar na tela um container dos Cards 1`] = `
 <div>
   <section
-    class="sc-gZGWnS ixooVO"
+    class="sc-gZGWnS eTVhLD"
     data-testid="id-cards-container"
   />
+  <div
+    class="sc-cLrhaH kYOzDC"
+  >
+    <button
+      class="sc-jWWaec frwRuj"
+    >
+      Adicionar Mais
+    </button>
+  </div>
 </div>
 `;

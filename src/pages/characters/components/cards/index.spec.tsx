@@ -9,6 +9,8 @@ const charactersMockEmpty: ICharacters = {
   data: {
     results: [],
   },
+  pagination: 3,
+  setPagination: jest.fn(),
 };
 
 describe("<Cards/>", () => {
@@ -22,7 +24,9 @@ describe("<Cards/>", () => {
   it("Deveria renderizar na tela um container dos Cards", () => {
     const screen = render(
       <RoutersContextTesting>
-        <Cards data={charactersMockEmpty.data} />
+        <Cards
+          {...charactersMockEmpty}
+        />
       </RoutersContextTesting>
     );
     const cardsContainer = screen.getByTestId("id-cards-container");
@@ -33,7 +37,7 @@ describe("<Cards/>", () => {
   it("Deveria renderizar na tela um container com cards ao injetar os personagens", () => {
     const screen = render(
       <RoutersContextTesting>
-        <Cards data={charactersMock.data} />
+        <Cards {...charactersMock} />
       </RoutersContextTesting>
     );
     const cardsContainer = screen.getByTestId("id-cards-container");
