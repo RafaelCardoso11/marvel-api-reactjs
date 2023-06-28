@@ -1,8 +1,8 @@
 import { fireEvent, render } from "@testing-library/react";
-import { Search } from "./index";
+import { AutoComplete } from "./index";
 import { act } from "react-dom/test-utils";
 
-describe("<Search/>", () => {
+describe("<AutoComplete/>", () => {
   jest.useFakeTimers(); // Usar fake timers antes dos testes
   afterEach(() => {
     jest.clearAllTimers(); // Limpar todos os timers
@@ -10,7 +10,7 @@ describe("<Search/>", () => {
 
   it("Deveria renderizar na tela o componente Search com um Input", () => {
     const setValueAfterWrite = jest.fn();
-    const screen = render(<Search setValueAfterWrite={setValueAfterWrite} />);
+    const screen = render(<AutoComplete setValueAfterWrite={setValueAfterWrite} />);
 
     const searchInput = screen.getByTestId("id-search-characters");
     expect(searchInput).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe("<Search/>", () => {
   });
   it("Deveria ser possível buscar", () => {
     const setValueAfterWrite = jest.fn();
-    const screen = render(<Search setValueAfterWrite={setValueAfterWrite} />);
+    const screen = render(<AutoComplete setValueAfterWrite={setValueAfterWrite} />);
 
     const valueSearch = "teste";
     const searchInput = screen.getByTestId("id-search-characters");
@@ -35,7 +35,7 @@ describe("<Search/>", () => {
     const valueAfterWrite = jest.fn();
     const valueSearch = "teste";
 
-    const screen = render(<Search setValueAfterWrite={valueAfterWrite} />);
+    const screen = render(<AutoComplete setValueAfterWrite={valueAfterWrite} />);
 
     const searchInput = screen.getByTestId("id-search-characters");
 
