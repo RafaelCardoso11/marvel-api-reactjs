@@ -3,22 +3,28 @@
 exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar uma mensagem que não foi encontrado 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value="batman"
-      />
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value="batman"
+        />
+      </div>
+    </header>
+    <div>
+      Nenhum personagem encontrado
     </div>
-    Nenhum personagem encontrado
   </div>
 </div>
 `;
@@ -26,33 +32,37 @@ exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar u
 exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagens 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value="H"
-      />
-    </div>
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value="H"
+        />
+      </div>
+    </header>
     <div
       data-testid="id-cards-characters"
     >
       <section
-        class="sc-gZGWnS ixooVO"
+        class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
         <div
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -63,13 +73,27 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
             </h2>
             <img
               alt="Imagem do personagem Hulk"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
         </div>
       </section>
+      <div
+        class="sc-cLrhaH kYOzDC"
+      >
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Remover
+        </button>
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Adicionar Mais
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -78,33 +102,37 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
 exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value="Hulk"
-      />
-    </div>
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value="Hulk"
+        />
+      </div>
+    </header>
     <div
       data-testid="id-cards-characters"
     >
       <section
-        class="sc-gZGWnS ixooVO"
+        class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
         <div
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -115,13 +143,27 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
             </h2>
             <img
               alt="Imagem do personagem Hulk"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
         </div>
       </section>
+      <div
+        class="sc-cLrhaH kYOzDC"
+      >
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Remover
+        </button>
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Adicionar Mais
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -130,33 +172,55 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
 exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value=""
-      />
-    </div>
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value=""
+        />
+        <div
+          class="sc-dSyItl cpXhBl"
+        >
+          <svg
+            class="sc-fmMAES yyasV"
+            fill="currentColor"
+            height="20"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
     <div
       data-testid="id-cards-characters"
     >
       <section
-        class="sc-gZGWnS ixooVO"
+        class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
         <div
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -167,7 +231,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
             </h2>
             <img
               alt="Imagem do personagem 3-D Man"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
@@ -177,7 +241,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -188,13 +252,27 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
             </h2>
             <img
               alt="Imagem do personagem Hulk"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
         </div>
       </section>
+      <div
+        class="sc-cLrhaH kYOzDC"
+      >
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Remover
+        </button>
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Adicionar Mais
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -203,33 +281,55 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
 exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela caso tenha characters 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value=""
-      />
-    </div>
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value=""
+        />
+        <div
+          class="sc-dSyItl cpXhBl"
+        >
+          <svg
+            class="sc-fmMAES yyasV"
+            fill="currentColor"
+            height="20"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
     <div
       data-testid="id-cards-characters"
     >
       <section
-        class="sc-gZGWnS ixooVO"
+        class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
         <div
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -240,7 +340,7 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
             </h2>
             <img
               alt="Imagem do personagem 3-D Man"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
@@ -250,7 +350,7 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -261,13 +361,27 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
             </h2>
             <img
               alt="Imagem do personagem Hulk"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
         </div>
       </section>
+      <div
+        class="sc-cLrhaH kYOzDC"
+      >
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Remover
+        </button>
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Adicionar Mais
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -276,33 +390,37 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
 exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vazia 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value=" "
-      />
-    </div>
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value=" "
+        />
+      </div>
+    </header>
     <div
       data-testid="id-cards-characters"
     >
       <section
-        class="sc-gZGWnS ixooVO"
+        class="sc-gZGWnS eTVhLD"
         data-testid="id-cards-container"
       >
         <div
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -313,7 +431,7 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
             </h2>
             <img
               alt="Imagem do personagem 3-D Man"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
@@ -323,7 +441,7 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
           data-testid="id-cards-content"
         >
           <div
-            class="sc-kvAqsT crfTLG"
+            class="sc-kvAqsT efdGIg"
             data-testid="id-card-container"
           >
             <h2
@@ -334,13 +452,27 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
             </h2>
             <img
               alt="Imagem do personagem Hulk"
-              class="sc-grJzXs hvxsKK"
+              class="sc-grJzXs cqACap"
               data-testid="id-img-content"
               src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
             />
           </div>
         </div>
       </section>
+      <div
+        class="sc-cLrhaH kYOzDC"
+      >
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Remover
+        </button>
+        <button
+          class="sc-jWWaec frwRuj"
+        >
+          Adicionar Mais
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -349,22 +481,46 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
 exports[`<Characters/> Deveria renderizar na tela os componentes container-characters, container-search-characters e searchCharacters 1`] = `
 <div>
   <div
-    class="sc-cLrhaH jGMCgM"
+    class="sc-fIGkQR bFxWGa"
     data-testid="id-container-characters"
   >
-    <div
-      class="sc-jWWaec iQvkjV"
+    <header
+      class="sc-hpvRAK iRGozt"
       data-testid="id-container-search-characters"
     >
-      <input
-        class="sc-fIGkQR"
-        data-testid="id-search-characters"
-        placeholder="Pesquisar..."
-        type="text"
-        value=""
-      />
+      <div
+        class="sc-dbgcnz dxTlaz"
+      >
+        <input
+          class="sc-hUozzH bWKVHN"
+          data-testid="id-search-characters"
+          placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
+          type="text"
+          value=""
+        />
+        <div
+          class="sc-dSyItl cpXhBl"
+        >
+          <svg
+            class="sc-fmMAES yyasV"
+            fill="currentColor"
+            height="20"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <div>
+      Nenhum personagem encontrado
     </div>
-    Nenhum personagem encontrado
   </div>
 </div>
 `;

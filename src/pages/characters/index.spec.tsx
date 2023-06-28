@@ -11,6 +11,8 @@ const charactersMockEmpty: ICharacters = {
   data: {
     results: [],
   },
+  pagination: 3,
+  setPagination: jest.fn(),
 };
 
 const mockData = jest.fn();
@@ -142,7 +144,7 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(3);
+    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -205,7 +207,7 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(3);
+    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -240,7 +242,7 @@ describe("<Characters/>", () => {
     expect(imgsInScreen.length).toBe(1);
     expect(screen.container).toMatchSnapshot();
 
-    expect(mockData).toHaveBeenCalledTimes(6);
+    expect(mockData).toHaveBeenCalledTimes(7);
 
     expect.assertions(7);
   });
@@ -271,7 +273,7 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(3);
+    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -324,7 +326,7 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(3);
+    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
