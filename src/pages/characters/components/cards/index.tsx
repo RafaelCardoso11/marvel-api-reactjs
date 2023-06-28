@@ -5,6 +5,7 @@ import {
   CardsContainer,
   CardsContainerPagination,
   CardsButtonAddPage,
+  CardContainer,
 } from "./styles";
 
 export const Cards: React.FC<ICharacters> = ({
@@ -16,9 +17,9 @@ export const Cards: React.FC<ICharacters> = ({
     <>
       <CardsContainer data-testid="id-cards-container">
         {characters.map((character, index) => (
-          <div data-testid="id-cards-content" key={index}>
+          <CardContainer data-testid="id-cards-content" key={index}>
             <Card character={character} data-testid="teste" />
-          </div>
+          </CardContainer>
         ))}
       </CardsContainer>
       <CardsContainerPagination>

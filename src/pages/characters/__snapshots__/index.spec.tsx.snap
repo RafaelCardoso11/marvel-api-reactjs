@@ -3,18 +3,18 @@
 exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar uma mensagem que não foi encontrado 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
@@ -22,7 +22,9 @@ exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar u
         />
       </div>
     </header>
-    <div>
+    <div
+      class="sc-hUozzH"
+    >
       Nenhum personagem encontrado
     </div>
   </div>
@@ -32,18 +34,18 @@ exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar u
 exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagens 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
@@ -52,6 +54,7 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
       </div>
     </header>
     <div
+      class="sc-fmMAES"
       data-testid="id-cards-characters"
     >
       <section
@@ -102,18 +105,18 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
 exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
@@ -122,6 +125,7 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
       </div>
     </header>
     <div
+      class="sc-fmMAES"
       data-testid="id-cards-characters"
     >
       <section
@@ -172,28 +176,28 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
 exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
           value=""
         />
         <div
-          class="sc-dSyItl cpXhBl"
+          class="sc-bfmpKG klRheD"
         >
           <svg
-            class="sc-fmMAES yyasV"
+            class="sc-dMOoFv iNUuWF"
             fill="currentColor"
             height="20"
             stroke="currentColor"
@@ -210,6 +214,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
       </div>
     </header>
     <div
+      class="sc-fmMAES"
       data-testid="id-cards-characters"
     >
       <section
@@ -281,28 +286,28 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
 exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela caso tenha characters 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
           value=""
         />
         <div
-          class="sc-dSyItl cpXhBl"
+          class="sc-bfmpKG klRheD"
         >
           <svg
-            class="sc-fmMAES yyasV"
+            class="sc-dMOoFv iNUuWF"
             fill="currentColor"
             height="20"
             stroke="currentColor"
@@ -319,6 +324,7 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
       </div>
     </header>
     <div
+      class="sc-fmMAES"
       data-testid="id-cards-characters"
     >
       <section
@@ -390,18 +396,18 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
 exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vazia 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
@@ -410,6 +416,7 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
       </div>
     </header>
     <div
+      class="sc-fmMAES"
       data-testid="id-cards-characters"
     >
       <section
@@ -481,28 +488,28 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
 exports[`<Characters/> Deveria renderizar na tela os componentes container-characters, container-search-characters e searchCharacters 1`] = `
 <div>
   <div
-    class="sc-fIGkQR bFxWGa"
+    class="sc-hpvRAK biGWKg"
     data-testid="id-container-characters"
   >
     <header
-      class="sc-hpvRAK iRGozt"
+      class="sc-dbgcnz jqVckL"
       data-testid="id-container-search-characters"
     >
       <div
-        class="sc-dbgcnz dxTlaz"
+        class="sc-dSyItl kqPqMi"
       >
         <input
-          class="sc-hUozzH bWKVHN"
+          class="sc-bkWJyw btAKAJ"
           data-testid="id-search-characters"
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
           type="text"
           value=""
         />
         <div
-          class="sc-dSyItl cpXhBl"
+          class="sc-bfmpKG klRheD"
         >
           <svg
-            class="sc-fmMAES yyasV"
+            class="sc-dMOoFv iNUuWF"
             fill="currentColor"
             height="20"
             stroke="currentColor"
@@ -518,7 +525,9 @@ exports[`<Characters/> Deveria renderizar na tela os componentes container-chara
         </div>
       </div>
     </header>
-    <div>
+    <div
+      class="sc-hUozzH"
+    >
       Nenhum personagem encontrado
     </div>
   </div>

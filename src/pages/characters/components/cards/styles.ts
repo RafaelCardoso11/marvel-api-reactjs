@@ -23,5 +23,11 @@ const CardsButtonAddPage = styled.button`
   cursor: pointer;
   background-color: #242424;
 `;
+const CardContainer = styled.button``;
 
-export { CardsContainer, CardsContainerPagination, CardsButtonAddPage };
+export {
+  CardsContainer,
+  CardsContainerPagination,
+  CardsButtonAddPage,
+  CardContainer,
+};

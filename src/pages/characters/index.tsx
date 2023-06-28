@@ -2,8 +2,13 @@ import { useDataFetcher } from "@/hooks/useDataFetcher";
 import { useEffect, useCallback, useState } from "react";
 
 import { ICharacters } from "@/interfaces/characters";
-import { Cards } from "./components/cards";
-import { StyledContainer, CharactersPageHeaderContainer } from "./styles";
+import { Cards as CharactersCards } from "./components/cards";
+import {
+  CharactersContainer,
+  CharactersHeaderContainer,
+  CharactersNotCharactersContainer,
+  CharactersCardsContainer,
+} from "./styles";
 import { isEmpty } from "lodash";
 import { AutoComplete } from "@/components/autoComplete";
 
@@ -29,25 +34,27 @@ export const Characters = () => {
   }, [handleSearch]);
 
   return (
-    <StyledContainer data-testid="id-container-characters">
-      <CharactersPageHeaderContainer data-testid="id-container-search-characters">
+    <CharactersContainer data-testid="id-container-characters">
+      <CharactersHeaderContainer data-testid="id-container-search-characters">
         <AutoComplete
           setValueAfterWrite={setValueSearch}
           placeholder="Digite para pesquisar o seu Herói da MARVEL favorito."
         />
-      </CharactersPageHeaderContainer>
+      </CharactersHeaderContainer>
 
       {characters?.data.results.length ? (
-        <div data-testid="id-cards-characters">
-          <Cards
+        <CharactersCardsContainer data-testid="id-cards-characters">
+          <CharactersCards
             data={characters.data}
             setPagination={setPagination}
             pagination={pagination}
           />
-        </div>
+        </CharactersCardsContainer>
       ) : (
-        <div>Nenhum personagem encontrado</div>
+        <CharactersNotCharactersContainer>
+          Nenhum personagem encontrado
+        </CharactersNotCharactersContainer>
       )}
-    </StyledContainer>
+    </CharactersContainer>
   );
 };
