@@ -14,10 +14,9 @@ import { isEmpty } from "lodash";
 import { ICharacters } from "@/interfaces/characters";
 import { ICharacter } from "@/interfaces/character";
 
-
 export const Character: React.FC = () => {
-  const { id } = useParams();
-  const { data: characters } = useDataFetcher<ICharacters>("characters/" + id);
+  const { id: idCharacter } = useParams();
+  const { data: characters } = useDataFetcher<ICharacters>("characters/" + idCharacter);
 
   const [character, setCharacter] = useState<ICharacter>();
 
@@ -29,21 +28,24 @@ export const Character: React.FC = () => {
   }, [characters]);
 
   return (
-    <CharacterPage>
+    <CharacterPage data-testid="id-character-page">
       {character && (
         <>
           <CharacterPageImage
+            data-testid="id-character-page-image"
             src={character.thumbnail.path + "." + character.thumbnail.extension}
             alt={`Imagem do personagem ${character.name}`}
           />
-          <CharacterPageContent>
-            <CharacterPageName>{character.name}</CharacterPageName>
-            <CharacterPageDetails>
-              <CharacterPageDetailsParagraph>
+          <CharacterPageContent data-testid="id-character-page-content">
+            <CharacterPageName data-testid="id-character-name">
+              {character.name}
+            </CharacterPageName>
+            <CharacterPageDetails data-testid="id-character-page-details">
+              <CharacterPageDetailsParagraph data-testid="id-character-description">
                 {character.description}
               </CharacterPageDetailsParagraph>
-              <CharacterPageDetailsParagraph>
-                #ID: {character.id}
+              <CharacterPageDetailsParagraph data-testid="id-character">
+                #ID: {idCharacter}
               </CharacterPageDetailsParagraph>
             </CharacterPageDetails>
           </CharacterPageContent>
