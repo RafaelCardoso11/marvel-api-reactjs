@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, KeyboardEvent, useState } from "react";
 import {
   SearchCharactersPage,
   SearchCharactersPageTitle,
@@ -13,14 +13,22 @@ import { useNavigate } from "react-router-dom";
 
 import { AiOutlineSearch } from "react-icons/ai";
 export const SearchCharacters = () => {
-  const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
-  const handleSearch = () => {
+
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearchNavigate = () => {
     navigate("/characters?nameStartsWith=" + searchValue);
   };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeValueSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(event.target.value);
+  };
+
+  const handleEnterKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.code === "Enter") {
+      handleSearchNavigate();
+    }
   };
 
   return (
@@ -32,16 +40,17 @@ export const SearchCharacters = () => {
         </SearchCharactersTitleIcon>
       </SearchCharactersPageTitle>
       <SearchCharactersPageSubtitle>
-      Find information about your favorite Marvel heroes.
+        Find information about your favorite Marvel heroes.
       </SearchCharactersPageSubtitle>
       <SearchCharactersPageSearchContainer>
         <SearchCharactersPageSearchBar
           type="text"
           placeholder="Search for your favorite Marvel Hero"
           value={searchValue}
-          onChange={handleChange}
+          onKeyDown={handleEnterKeyPress}
+          onChange={handleChangeValueSearch}
         />
-        <SearchCharactersPageSearchButton onClick={handleSearch}>
+        <SearchCharactersPageSearchButton onClick={handleSearchNavigate}>
           Search
         </SearchCharactersPageSearchButton>
       </SearchCharactersPageSearchContainer>
