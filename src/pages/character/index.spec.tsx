@@ -7,9 +7,7 @@ import { charactersMock } from "@/mocks/characters";
 let charactersMockEmpty: ICharacters = {
   data: {
     results: [],
-  },
-  pagination: 3,
-  setPagination: jest.fn(),
+  }
 };
 
 jest.mock("@/hooks/useDataFetcher", () => {
@@ -129,7 +127,7 @@ describe("<Character />", () => {
     const { extension, path } = character.thumbnail;
 
     const srcCharacter = `${path}.${extension}`;
-    const altCharacter = `Imagem do personagem ${character.name}`;
+    const altCharacter = `Image for character ${character.name}`;
 
 
     expect(characterImage).toHaveAttribute("src", srcCharacter);

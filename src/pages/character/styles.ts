@@ -9,6 +9,7 @@ const CharacterPage = styled.div`
 const CharacterPageImage = styled.img`
   width: 300px;
   margin-right: 20px;
+  border:  1px #ff9000 solid;
 `;
 
 const CharacterPageContent = styled.div`

@@ -13,10 +13,11 @@ import { useEffect, useState } from "react";
 import { isEmpty } from "lodash";
 import { ICharacters } from "@/interfaces/characters";
 import { ICharacter } from "@/interfaces/character";
-
 export const Character: React.FC = () => {
   const { id: idCharacter } = useParams();
-  const { data: characters } = useDataFetcher<ICharacters>("characters/" + idCharacter);
+  const { data: characters } = useDataFetcher<ICharacters>(
+    "characters/" + idCharacter
+  );
 
   const [character, setCharacter] = useState<ICharacter>();
 
@@ -34,7 +35,7 @@ export const Character: React.FC = () => {
           <CharacterPageImage
             data-testid="id-character-page-image"
             src={character.thumbnail.path + "." + character.thumbnail.extension}
-            alt={`Imagem do personagem ${character.name}`}
+            alt={`Image for character ${character.name}`}
           />
           <CharacterPageContent data-testid="id-character-page-content">
             <CharacterPageName data-testid="id-character-name">
