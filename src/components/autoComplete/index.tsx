@@ -9,14 +9,16 @@ import { IAutoCompleteProps } from "./interface/autoCompleteProps";
 
 export const AutoComplete: React.FC<IAutoCompleteProps> = ({
   setValueAfterWrite,
-  placeholder = "Digite para pesquisar",
+  placeholder = "Search...",
+  value = "",
+  handleAfterBounced,
+  setValueSearch,
 }) => {
   const [loading, setLoading] = useState(false);
-  const [searchCharacters, setSearchCharacters] = useState<string>("");
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchCharacters = event.target.value;
-    setSearchCharacters(searchCharacters);
+    setValueSearch(searchCharacters);
   };
 
   useEffect(() => {
@@ -25,12 +27,14 @@ export const AutoComplete: React.FC<IAutoCompleteProps> = ({
 
     setLoading(true);
     const delayDebounce = setTimeout(() => {
-      setValueAfterWrite(searchCharacters);
+      setValueAfterWrite(value);
       setLoading(false);
+      handleAfterBounced();
     }, delayInSeconds);
 
+
     return () => clearTimeout(delayDebounce);
-  }, [setValueAfterWrite, searchCharacters]);
+  }, [handleAfterBounced, setValueAfterWrite, value]);
 
   return (
     <AutocompleteContainer>
@@ -38,7 +42,7 @@ export const AutoComplete: React.FC<IAutoCompleteProps> = ({
         type="text"
         placeholder={placeholder}
         data-testid="id-search-characters"
-        value={searchCharacters}
+        value={value}
         onChange={handleSearch}
       />
       {loading && (
