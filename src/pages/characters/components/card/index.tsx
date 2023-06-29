@@ -21,7 +21,7 @@ export const Card: React.FC<ICharactersProps> = ({ character }) => {
       <StyledImg
         data-testid="id-img-content"
         src={character.thumbnail.path + "." + character.thumbnail.extension}
-        alt={`Imagem do personagem ${character.name}`}
+        alt={`Image for character ${character.name}`}
       />
     </StyledContainerCard>
   );

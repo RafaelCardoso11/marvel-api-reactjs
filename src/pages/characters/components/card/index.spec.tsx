@@ -49,7 +49,7 @@ describe("<Cards/>", () => {
       thumbnail: { extension, path },
     } = oneCharactersForCharactersMock;
     const srcCharacter = `${path}.${extension}`;
-    const altCharacter = `Imagem do personagem ${name}`;
+    const altCharacter = `Image for character ${name}`;
 
     expect(typographNameCard).toHaveTextContent(name);
 

@@ -3,80 +3,62 @@
 exports[`<Cards/> Deveria renderizar na tela um container com cards ao injetar os personagens 1`] = `
 <div>
   <section
-    class="sc-gZGWnS eTVhLD"
+    class="sc-gZGWnS jlbgph"
     data-testid="id-cards-container"
   >
     <button
-      class="sc-fIGkQR"
+      class="sc-cLrhaH jMQJbC"
       data-testid="id-cards-content"
     >
       <div
-        class="sc-kvAqsT efdGIg"
+        class="sc-kvAqsT dvzAXP"
         data-testid="id-card-container"
       >
         <h2
-          class="sc-cdtKKh hnyVce"
+          class="sc-cdtKKh gUWuCS"
           data-testid="id-typograph-name-content"
         >
           3-D Man
         </h2>
         <img
-          alt="Imagem do personagem 3-D Man"
-          class="sc-grJzXs cqACap"
+          alt="Image for character 3-D Man"
+          class="sc-grJzXs jvyAXi"
           data-testid="id-img-content"
           src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         />
       </div>
     </button>
     <button
-      class="sc-fIGkQR"
+      class="sc-cLrhaH jMQJbC"
       data-testid="id-cards-content"
     >
       <div
-        class="sc-kvAqsT efdGIg"
+        class="sc-kvAqsT dvzAXP"
         data-testid="id-card-container"
       >
         <h2
-          class="sc-cdtKKh hnyVce"
+          class="sc-cdtKKh gUWuCS"
           data-testid="id-typograph-name-content"
         >
           Hulk
         </h2>
         <img
-          alt="Imagem do personagem Hulk"
-          class="sc-grJzXs cqACap"
+          alt="Image for character Hulk"
+          class="sc-grJzXs jvyAXi"
           data-testid="id-img-content"
           src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
         />
       </div>
     </button>
   </section>
-  <div
-    class="sc-cLrhaH kYOzDC"
-  >
-    <button
-      class="sc-jWWaec frwRuj"
-    >
-      Adicionar Mais
-    </button>
-  </div>
 </div>
 `;
 
 exports[`<Cards/> Deveria renderizar na tela um container dos Cards 1`] = `
 <div>
   <section
-    class="sc-gZGWnS eTVhLD"
+    class="sc-gZGWnS jlbgph"
     data-testid="id-cards-container"
   />
-  <div
-    class="sc-cLrhaH kYOzDC"
-  >
-    <button
-      class="sc-jWWaec frwRuj"
-    >
-      Adicionar Mais
-    </button>
-  </div>
 </div>
 `;
