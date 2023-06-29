@@ -22,7 +22,5 @@ export const charactersMock: ICharacters = {
         description: "lorem ipsum dolor sit amet, consectetur adip 2"
       },
     ],
-  },
-  pagination: 3,
-  setPagination: jest.fn(),
+  }
 };

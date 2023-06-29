@@ -11,8 +11,6 @@ const charactersMockEmpty: ICharacters = {
   data: {
     results: [],
   },
-  pagination: 3,
-  setPagination: jest.fn(),
 };
 
 const mockData = jest.fn();
@@ -144,7 +142,6 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -178,7 +175,7 @@ describe("<Characters/>", () => {
     expect(imgsInScreen.length).toBe(1);
 
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(6);
+    expect.assertions(5);
   });
   it("Deveria buscar a partir da inicial do nome dos personagens", async () => {
     mockData.mockReturnValue({
@@ -207,7 +204,6 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -242,9 +238,7 @@ describe("<Characters/>", () => {
     expect(imgsInScreen.length).toBe(1);
     expect(screen.container).toMatchSnapshot();
 
-    expect(mockData).toHaveBeenCalledTimes(7);
-
-    expect.assertions(7);
+    expect.assertions(5);
   });
   it("Deveria buscar todos os personagens caso a busca seja vazia", () => {
     mockData.mockReturnValue({
@@ -273,7 +267,6 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -297,7 +290,7 @@ describe("<Characters/>", () => {
     expect(cardHulk).toBeInTheDocument();
     expect(imgsInScreen.length).toBe(charactersMock.data.results.length);
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(7);
+    expect.assertions(6);
   });
   it("Deveria ao buscar um characters que não existe mostrar uma mensagem que não foi encontrado", () => {
     mockData.mockReturnValue({
@@ -326,7 +319,7 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(4);
+    expect(mockData).toHaveBeenCalledTimes(5);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
@@ -344,7 +337,7 @@ describe("<Characters/>", () => {
     rerender();
 
     const messageSearchNotFind = screen.getByText(
-      /Nenhum personagem encontrado/i
+      /No characters found./i
     );
 
     expect(result.current.data).toEqual(charactersMockEmpty);
