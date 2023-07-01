@@ -28,7 +28,7 @@ Boas Práticas e Tecnologias
 Portal para desenvolvedores da Marvel: [Marvel for Developers](https://developer.marvel.com/)
 
 É possível no projeto:
-1) Fazer uma pesquisa pelo nome ou inicio do nome do Personagem.
+1) Fazer uma pesquisa pelo nome ou inicio do nome do Personagem por Busca simples e Auto Complete.
 2) Listagem do herói com sua thumbnail.
 3) Página com informações sobre o herói selecionado (descrição).
 
