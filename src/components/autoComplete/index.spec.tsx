@@ -1,4 +1,7 @@
-import { fireEvent, render } from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+} from "@testing-library/react";
 import { AutoComplete } from "./index";
 import { act } from "react-dom/test-utils";
 import { IAutoCompleteProps } from "./interface/autoCompleteProps";
@@ -65,7 +68,6 @@ describe("<AutoComplete/>", () => {
     const handleAfterBounced = jest.fn();
     const valueSearch = "teste";
 
-
     const setValue = jest.fn((valueRef) => {
       screen.rerender(
         <AutoComplete
@@ -97,6 +99,56 @@ describe("<AutoComplete/>", () => {
     });
     expect(searchInput).toHaveValue(valueSearch);
     expect(handleAfterBounced).toHaveBeenCalledWith(valueSearch);
+    expect(screen.container).toMatchSnapshot();
+  });
+  it("Deveria renderizar um loading ao buscar", async () => {
+    const handleAfterBounced = jest.fn();
+    const valueSearch = "test";
+
+    const setValue = jest.fn((valueRef) => {
+      screen.rerender(
+        <AutoComplete
+          {...AutoCompleteProps}
+          setValueSearch={setValue}
+          handleAfterBounced={handleAfterBounced}
+          value={valueRef}
+        />
+      );
+    });
+
+    const screen = render(
+      <AutoComplete
+        {...AutoCompleteProps}
+        setValueSearch={setValue}
+        handleAfterBounced={handleAfterBounced}
+        value={""}
+      />
+    );
+
+    expect(() => screen.getByTestId("id-loading-container")).toThrow();
+    expect(() => screen.getByTestId("id-loading-icon")).toThrow();
+    
+    const searchInput = screen.getByTestId("id-search-characters");
+    fireEvent.change(searchInput, {
+      target: { value: valueSearch },
+    });
+
+    const loadingContainer = screen.getByTestId("id-loading-container");
+    const loadingIcon = screen.getByTestId("id-loading-icon");
+    expect(loadingContainer).toBeInTheDocument();
+    expect(loadingIcon).toBeInTheDocument();
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    expect(loadingContainer).not.toBeInTheDocument();
+    expect(loadingIcon).not.toBeInTheDocument();
+
+    expect(handleAfterBounced).toHaveBeenCalledTimes(1);
+    expect(setValue).toHaveBeenCalled();
+
+    expect(searchInput).toHaveValue(valueSearch);
     expect(screen.container).toMatchSnapshot();
   });
 });

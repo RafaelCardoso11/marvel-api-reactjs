@@ -10,7 +10,7 @@ import { IAutoCompleteProps } from "./interface/autoCompleteProps";
 export const AutoComplete: React.FC<IAutoCompleteProps> = ({
   placeholder = "Search...",
   value,
-  testID="id-search-characters",
+  testID = "id-search-characters",
   handleAfterBounced,
   setValueSearch,
 }) => {
@@ -25,14 +25,15 @@ export const AutoComplete: React.FC<IAutoCompleteProps> = ({
     const milliSeconds = 1000;
     const delayInSeconds = milliSeconds * 1;
 
-    setLoading(true);
-    const delayDebounce = setTimeout(() => {
-      handleAfterBounced(value);
-      setLoading(false);
-    }, delayInSeconds);
+    if (value) {
+      setLoading(true);
+      const delayDebounce = setTimeout(() => {
+        handleAfterBounced(value);
+        setLoading(false);
+      }, delayInSeconds);
 
-
-    return () => clearTimeout(delayDebounce);
+      return () => clearTimeout(delayDebounce);
+    }
   }, [handleAfterBounced, value]);
 
   return (
@@ -45,8 +46,8 @@ export const AutoComplete: React.FC<IAutoCompleteProps> = ({
         onChange={handleSearch}
       />
       {loading && (
-        <LoadingContainer>
-          <LoadingIcon size={20} />
+        <LoadingContainer data-testid="id-loading-container">
+          <LoadingIcon size={20} data-testid="id-loading-icon" />
         </LoadingContainer>
       )}
     </AutocompleteContainer>
