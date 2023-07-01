@@ -24,9 +24,12 @@ export const Characters = () => {
 
   const { data: characters } = useDataFetcher<ICharacters>(queryParams);
 
-  const handleAfterBounced = useCallback((valueSearch: string) => {
-    navigate(`?${PARAM_KEY_NAME_STARTS}=` + valueSearch);
-  }, [navigate]);
+  const handleAfterBounced = useCallback(
+    (valueSearch: string) => {
+      navigate(`?${PARAM_KEY_NAME_STARTS}=` + valueSearch);
+    },
+    [navigate]
+  );
 
   const handleNavigateForHome = () => {
     navigate("/");
@@ -40,8 +43,6 @@ export const Characters = () => {
       setQueryParams(
         `characters?${PARAM_KEY_NAME_STARTS}=${getParamNameStarts}`
       );
-    } else {
-      setQueryParams(`characters`);
     }
   }, [search]);
 

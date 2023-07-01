@@ -324,7 +324,7 @@ describe("<Characters/>", () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(mockData).toHaveBeenCalledTimes(5);
+    expect(mockData).toHaveBeenCalledTimes(4);
 
     const { result, rerender } = renderHook(() =>
       useDataFetcherModule.useDataFetcher<ICharacters>("")
