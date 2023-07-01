@@ -6,6 +6,7 @@ import * as useDataFetcherModule from "@/hooks/useDataFetcher";
 import RoutersContextTesting from "@/tests/routers";
 import { act } from "react-dom/test-utils";
 import { ICharacter } from "@/interfaces/character";
+import { Route } from "react-router-dom";
 
 const charactersMockEmpty: ICharacters = {
   data: {
@@ -50,17 +51,21 @@ describe("<Characters/>", () => {
       </RoutersContextTesting>
     );
     const containerCharacters = screen.getByTestId("id-container-characters");
+    const CharactersHeaderContainerIcon = screen.getByTestId("id-characters-header-icon-container");
+    const AiOutlineSearch = screen.getByTestId("id-characters-header-icon");
     const containerSearchCharacters = screen.getByTestId(
       "id-container-search-characters"
     );
-    const searchCharacters = screen.getByTestId("id-search-characters");
+    const searchCharacters = screen.getByTestId("id-characters-search");
 
     expect(containerCharacters).toBeInTheDocument();
     expect(containerSearchCharacters).toBeInTheDocument();
     expect(searchCharacters).toBeInTheDocument();
+    expect(CharactersHeaderContainerIcon).toBeInTheDocument();
+    expect(AiOutlineSearch).toBeInTheDocument();
 
     expect(screen.container).toMatchSnapshot();
-    expect.assertions(4);
+    expect.assertions(6);
   });
   it("Deveria buscar os characters ao renderizar a aplicação", async () => {
     mockData.mockReturnValue({
@@ -128,7 +133,7 @@ describe("<Characters/>", () => {
       </RoutersContextTesting>
     );
 
-    const inputSearchCharacters = screen.getByTestId("id-search-characters");
+    const inputSearchCharacters = screen.getByTestId("id-characters-search");
 
     expect(inputSearchCharacters).toBeInTheDocument();
 
@@ -190,7 +195,7 @@ describe("<Characters/>", () => {
       </RoutersContextTesting>
     );
 
-    const inputSearchCharacters = screen.getByTestId("id-search-characters");
+    const inputSearchCharacters = screen.getByTestId("id-characters-search");
 
     expect(inputSearchCharacters).toBeInTheDocument();
 
@@ -253,7 +258,7 @@ describe("<Characters/>", () => {
       </RoutersContextTesting>
     );
 
-    const inputSearchCharacters = screen.getByTestId("id-search-characters");
+    const inputSearchCharacters = screen.getByTestId("id-characters-search");
 
     expect(inputSearchCharacters).toBeInTheDocument();
 
@@ -305,7 +310,7 @@ describe("<Characters/>", () => {
       </RoutersContextTesting>
     );
 
-    const inputSearchCharacters = screen.getByTestId("id-search-characters");
+    const inputSearchCharacters = screen.getByTestId("id-characters-search");
 
     expect(inputSearchCharacters).toBeInTheDocument();
 
@@ -344,5 +349,32 @@ describe("<Characters/>", () => {
     expect(messageSearchNotFind).toBeInTheDocument();
     expect(screen.container).toMatchSnapshot();
     expect.assertions(6);
+  });
+  it("Deveria navegar para a home a clicar no icone CharactersHeaderContainerIcon", () => {
+    mockData.mockReturnValue({
+      data: charactersMock,
+    });
+
+    const pathCharacters = '/characters'
+    const textNewRouter = 'Router /'
+    history.pushState({}, '', pathCharacters)
+
+    const screen = render(
+      <RoutersContextTesting router={{
+        path: pathCharacters
+      }} routes={[<Route path="/" element={<>{textNewRouter}</>}  key={1}/>]}>
+        <Characters />
+      </RoutersContextTesting>
+    );
+
+
+    const CharactersHeaderContainerIcon = screen.getByTestId(
+      "id-characters-header-icon-container"
+    );
+    fireEvent.click(CharactersHeaderContainerIcon)
+    expect(window.location.pathname).toBe('/')
+    
+    const newRouter = screen.getByText(textNewRouter)
+    expect(newRouter).toBeInTheDocument()
   });
 });

@@ -12,8 +12,10 @@ exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar u
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -32,7 +34,7 @@ exports[`<Characters/> Deveria ao buscar um characters que não existe mostrar u
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value="batman"
@@ -60,8 +62,10 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -80,7 +84,7 @@ exports[`<Characters/> Deveria buscar a partir da inicial do nome dos personagen
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value="H"
@@ -135,8 +139,10 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -155,7 +161,7 @@ exports[`<Characters/> Deveria buscar a partir do nome dos personagens 1`] = `
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value="Hulk"
@@ -210,8 +216,10 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -230,7 +238,7 @@ exports[`<Characters/> Deveria buscar os characters ao renderizar a aplicação 
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value=""
@@ -325,8 +333,10 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -345,7 +355,7 @@ exports[`<Characters/> Deveria buscar os characters e listalos em cards na tela 
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value=""
@@ -440,8 +450,10 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -460,7 +472,7 @@ exports[`<Characters/> Deveria buscar todos os personagens caso a busca seja vaz
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value=" "
@@ -537,8 +549,10 @@ exports[`<Characters/> Deveria renderizar na tela os componentes container-chara
     >
       <div
         class="sc-hUozzH kmOwEQ"
+        data-testid="id-characters-header-icon-container"
       >
         <svg
+          data-testid="id-characters-header-icon"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -557,7 +571,7 @@ exports[`<Characters/> Deveria renderizar na tela os componentes container-chara
       >
         <input
           class="sc-dSyItl gCvvLA"
-          data-testid="id-search-characters"
+          data-testid="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
           type="text"
           value=""

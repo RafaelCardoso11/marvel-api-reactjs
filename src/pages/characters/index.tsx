@@ -24,46 +24,41 @@ export const Characters = () => {
 
   const { data: characters } = useDataFetcher<ICharacters>(queryParams);
 
-  const handleSearch = useCallback(() => {
-    if (!isEmpty(valueSearch.trim())) {
-      setQueryParams(`characters?${PARAM_KEY_NAME_STARTS}=${valueSearch}`);
-    } else {
-      setQueryParams(`characters`);
-    }
-  }, [valueSearch]);
-
-  const handleAfterBounced = useCallback(() => {
-    const PARAM_KEY = "nameStartsWith";
-    navigate(`?${PARAM_KEY}=` + valueSearch);
-  }, [navigate, valueSearch]);
+  const handleAfterBounced = useCallback((valueSearch: string) => {
+    navigate(`?${PARAM_KEY_NAME_STARTS}=` + valueSearch);
+  }, [navigate]);
 
   const handleNavigateForHome = () => {
     navigate("/");
   };
 
   useEffect(() => {
-    handleSearch();
-  }, [handleSearch]);
-
-  useEffect(() => {
     const query = new URLSearchParams(search);
-
-    if (!isEmpty(query.get(PARAM_KEY_NAME_STARTS))) {
-      setValueSearch(query.get(PARAM_KEY_NAME_STARTS) as string);
+    const getParamNameStarts = query.get(PARAM_KEY_NAME_STARTS);
+    if (!isEmpty(getParamNameStarts)) {
+      setValueSearch(getParamNameStarts as string);
+      setQueryParams(
+        `characters?${PARAM_KEY_NAME_STARTS}=${getParamNameStarts}`
+      );
+    } else {
+      setQueryParams(`characters`);
     }
   }, [search]);
 
   return (
     <CharactersContainer data-testid="id-container-characters">
       <CharactersHeaderContainer data-testid="id-container-search-characters">
-        <CharactersHeaderContainerIcon onClick={handleNavigateForHome}>
-          <AiOutlineSearch />
+        <CharactersHeaderContainerIcon
+          onClick={handleNavigateForHome}
+          data-testid="id-characters-header-icon-container"
+        >
+          <AiOutlineSearch data-testid="id-characters-header-icon" />
         </CharactersHeaderContainerIcon>
         <AutoComplete
-          setValueAfterWrite={setValueSearch}
           value={valueSearch}
           setValueSearch={setValueSearch}
           handleAfterBounced={handleAfterBounced}
+          testID="id-characters-search"
           placeholder="Search for your favorite Marvel Hero"
         />
       </CharactersHeaderContainer>
