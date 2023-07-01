@@ -57,7 +57,7 @@ const SearchCharactersPageSearchButton = styled.button`
   }
 `;
 
-const SearchCharactersPageSearchContainer = styled.div`
+const SearchCharactersPageSearchContainerBar = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -76,7 +76,7 @@ export {
   SearchCharactersPage,
   SearchCharactersPageSearchBar,
   SearchCharactersPageSearchButton,
-  SearchCharactersPageSearchContainer,
+  SearchCharactersPageSearchContainerBar,
   SearchCharactersPageSubtitle,
   SearchCharactersPageTitle,
   SearchCharactersPageFooter,

@@ -5,7 +5,7 @@ import {
   SearchCharactersPageSubtitle,
   SearchCharactersPageSearchBar,
   SearchCharactersPageSearchButton,
-  SearchCharactersPageSearchContainer,
+  SearchCharactersPageSearchContainerBar,
   SearchCharactersPageFooter,
   SearchCharactersTitleIcon,
 } from "./styles";
@@ -32,29 +32,33 @@ export const SearchCharacters = () => {
   };
 
   return (
-    <SearchCharactersPage>
-      <SearchCharactersPageTitle>
+    <SearchCharactersPage data-testid="id-search-characters-page">
+      <SearchCharactersPageTitle data-testid="id-search-characters-title">
         Search for your favorite hero
-        <SearchCharactersTitleIcon>
-          <AiOutlineSearch />
+        <SearchCharactersTitleIcon data-testid="id-search-characters-title-icon-container">
+          <AiOutlineSearch data-testid="id-search-characters-title-icon" />
         </SearchCharactersTitleIcon>
       </SearchCharactersPageTitle>
-      <SearchCharactersPageSubtitle>
+      <SearchCharactersPageSubtitle data-testid="id-search-characters-subtitle">
         Find information about your favorite Marvel heroes.
       </SearchCharactersPageSubtitle>
-      <SearchCharactersPageSearchContainer>
+      <SearchCharactersPageSearchContainerBar data-testid="id-search-characters-container">
         <SearchCharactersPageSearchBar
           type="text"
+          data-testid="id-search-characters-bar"
           placeholder="Search for your favorite Marvel Hero"
           value={searchValue}
           onKeyDown={handleEnterKeyPress}
           onChange={handleChangeValueSearch}
         />
-        <SearchCharactersPageSearchButton onClick={handleSearchNavigate}>
+        <SearchCharactersPageSearchButton
+          onClick={handleSearchNavigate}
+          data-testid="id-search-characters-button"
+        >
           Search
         </SearchCharactersPageSearchButton>
-      </SearchCharactersPageSearchContainer>
-      <SearchCharactersPageFooter>
+      </SearchCharactersPageSearchContainerBar>
+      <SearchCharactersPageFooter data-testid="id-search-characters-page-footer">
         ⚡️ Não julgue o livro pela capa! O design pode não ser de outro mundo,
         mas o código é digno do Multiverso! ✨🚀
       </SearchCharactersPageFooter>
