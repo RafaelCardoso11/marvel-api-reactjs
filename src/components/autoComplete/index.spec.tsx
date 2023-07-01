@@ -5,10 +5,8 @@ import { IAutoCompleteProps } from "./interface/autoCompleteProps";
 
 const AutoCompleteProps: IAutoCompleteProps = {
   handleAfterBounced: jest.fn(),
-  setValueAfterWrite: jest.fn(),
   setValueSearch: jest.fn(),
   value: "",
-  placeholder: "",
 };
 
 describe("<AutoComplete/>", () => {
@@ -26,41 +24,65 @@ describe("<AutoComplete/>", () => {
     expect(screen.container).toMatchSnapshot();
   });
   it("Deveria ser possível buscar", () => {
-    const setValueAfterWrite = jest.fn();
+    const handleAfterBounced = jest.fn();
     const valueSearch = "test";
 
-    let value = "";
     const setValue = jest.fn((valueRef) => {
-      value = valueRef;
+      screen.rerender(
+        <AutoComplete
+          {...AutoCompleteProps}
+          setValueSearch={setValue}
+          handleAfterBounced={handleAfterBounced}
+          value={valueRef}
+        />
+      );
+    });
+    const screen = render(
+      <AutoComplete
+        {...AutoCompleteProps}
+        setValueSearch={setValue}
+        handleAfterBounced={handleAfterBounced}
+        value={""}
+      />
+    );
+
+    const searchInput = screen.getByTestId("id-search-characters");
+    fireEvent.change(searchInput, {
+      target: { value: valueSearch },
+    });
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    expect(handleAfterBounced).toHaveBeenCalledTimes(1);
+    expect(setValue).toHaveBeenCalled();
+
+    expect(searchInput).toHaveValue(valueSearch);
+    expect(screen.container).toMatchSnapshot();
+  });
+  it("Deveria ser possível buscar de forma Debounce", () => {
+    const handleAfterBounced = jest.fn();
+    const valueSearch = "teste";
+
+
+    const setValue = jest.fn((valueRef) => {
+      screen.rerender(
+        <AutoComplete
+          {...AutoCompleteProps}
+          setValueSearch={setValue}
+          handleAfterBounced={handleAfterBounced}
+          value={valueRef}
+        />
+      );
     });
 
     const screen = render(
       <AutoComplete
         {...AutoCompleteProps}
         setValueSearch={setValue}
-        setValueAfterWrite={setValueAfterWrite}
-        value={value}
-      />
-    );
-    const searchInput = screen.getByTestId("id-search-characters");
-
-    fireEvent.change(searchInput, {
-      target: { value: valueSearch },
-    });
-    
-    expect(setValueAfterWrite).toHaveBeenCalled();
-
-    expect(searchInput).toHaveValue(valueSearch);
-    expect(screen.container).toMatchSnapshot();
-  });
-  it("Deveria ser possível buscar de forma Debounce", () => {
-    const valueAfterWrite = jest.fn();
-    const valueSearch = "teste";
-
-    const screen = render(
-      <AutoComplete
-        {...AutoCompleteProps}
-        setValueAfterWrite={valueAfterWrite}
+        handleAfterBounced={handleAfterBounced}
+        value={""}
       />
     );
 
@@ -74,7 +96,7 @@ describe("<AutoComplete/>", () => {
       jest.runAllTimers();
     });
     expect(searchInput).toHaveValue(valueSearch);
-    expect(valueAfterWrite).toHaveBeenCalledWith(valueSearch);
+    expect(handleAfterBounced).toHaveBeenCalledWith(valueSearch);
     expect(screen.container).toMatchSnapshot();
   });
 });

@@ -8,9 +8,9 @@ import {
 import { IAutoCompleteProps } from "./interface/autoCompleteProps";
 
 export const AutoComplete: React.FC<IAutoCompleteProps> = ({
-  setValueAfterWrite,
   placeholder = "Search...",
-  value = "",
+  value,
+  testID="id-search-characters",
   handleAfterBounced,
   setValueSearch,
 }) => {
@@ -27,21 +27,20 @@ export const AutoComplete: React.FC<IAutoCompleteProps> = ({
 
     setLoading(true);
     const delayDebounce = setTimeout(() => {
-      setValueAfterWrite(value);
+      handleAfterBounced(value);
       setLoading(false);
-      handleAfterBounced();
     }, delayInSeconds);
 
 
     return () => clearTimeout(delayDebounce);
-  }, [handleAfterBounced, setValueAfterWrite, value]);
+  }, [handleAfterBounced, value]);
 
   return (
     <AutocompleteContainer>
       <AutocompleteInput
         type="text"
         placeholder={placeholder}
-        data-testid="id-search-characters"
+        data-testid={testID}
         value={value}
         onChange={handleSearch}
       />
