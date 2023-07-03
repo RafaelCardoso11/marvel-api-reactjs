@@ -1,6 +1,6 @@
 # Marvel Consumo Api com ReactJS + Testing Library
 
-O projeto foi desenvolvido em ReactJS na versão 18.2.0 com Typescrip + VITE e consiste no consumo de endpoints da Marvel utilizando boas práticas de ReactJS e *Clean Arquiteture* com testes unitários. O projeto tem 100% de cobertura em testes com Jest + Testing Library utilizando dublês de testes (MOCKS, SPY, STUB e FAKE)
+O projeto foi desenvolvido em ReactJS na versão 18.2.0 com Typescript + VITE e consiste no consumo de endpoints da Marvel utilizando boas práticas de ReactJS e *Clean Arquiteture* com testes unitários. O projeto tem 100% de cobertura em testes com Jest + Testing Library utilizando dublês de testes (MOCKS, SPY, STUB e FAKE)
 
 Tecnologias Utilizadas
 * ReactJS
